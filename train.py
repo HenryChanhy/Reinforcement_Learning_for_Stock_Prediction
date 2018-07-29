@@ -51,6 +51,6 @@ try:
 				agent.expReplay(batch_size)
 
 		if e % 10 == 0:
-			agent.model.save("models/model_ep" + str(e))
+			agent.model.save("models/model_"+ stock_name +"_ep" + str(e))
 finally:
 	exit()
