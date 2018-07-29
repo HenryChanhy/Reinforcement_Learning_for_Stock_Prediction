@@ -11,7 +11,7 @@ def getStockDataVec(key):
 	lines = open("data/" + key + ".csv", "r").read().splitlines()
 
 	for line in lines[1:]:
-		vec.append(float(line.split(",")[4]))
+		vec.append(float(line.split(",")[3]))
 
 	return vec
 
@@ -27,7 +27,7 @@ def sigmoid(x):
 		print("division by zero!")
 	except Exception as err:
 		print("Error in sigmoid: " + err)
-	
+
 
 # returns an an n-day state representation ending at time t
 def getState(data, t, n):
